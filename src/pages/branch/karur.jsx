@@ -14,7 +14,6 @@ import {
   MapPin,
   MessagesSquare,
   Phone,
-  Quote,
   ScanLine,
   ShieldCheck,
   Stethoscope,
@@ -28,12 +27,13 @@ import hospitalBuilding from "@/assets/aboutus/why-about-sudha.webp";
 import overviewConsultation from "@/assets/karur/overview-consultation.webp";
 import Accordion from "@/components/Accordion";
 import KarurDoctors from "@/components/KarurDoctors";
+import KarurTestimonials from "@/components/KarurTestimonials";
 
 const branchStats = [
-  { label: "Patient beds", value: "50+" },
-  { label: "Departments", value: "15+" },
-  { label: "Emergency care", value: "24/7" },
   { label: "Years of Sudha care", value: "40+" },
+  { label: "Emergency care", value: "24/7" },
+  { label: "Departments", value: "15+" },
+  { label: "Patient beds", value: "50+" },
 ];
 
 const careReasons = [
@@ -73,53 +73,53 @@ const specialities = [
   {
     icon: HeartPulse,
     title: "Cardiology",
-    description: "Heart check-ups and care for heart-related concerns.",
+    description: "Heart check-ups and care for common heart conditions.",
   },
   {
     icon: Bone,
     title: "Orthopedics",
-    description: "Care for fractures, joint pain, back pain and sports injuries.",
+    description: "Care for fractures, joint pain and sports injuries.",
   },
   {
     icon: Syringe,
     title: "General Surgery",
-    description: "Surgical consultations for hernias, gallstones and other common conditions.",
+    description: "Surgical care for hernias, gallstones and other conditions.",
   },
   {
     icon: Stethoscope,
     title: "General Medicine",
-    description: "Care for fever, infections, high blood pressure and other common health concerns.",
+    description: "Care for fever, infections and common health concerns.",
   },
   {
     icon: Brain,
     title: "Neurology",
-    description: "Consultations for headaches, seizures and conditions affecting the nervous system.",
+    description: "Care for headaches, seizures and nervous system disorders.",
   },
   {
     icon: Ambulance,
     title: "Emergency Care",
-    description: "24/7 urgent care for injuries, accidents and sudden illness.",
+    description: "24/7 urgent care for injuries, accidents and illnesses.",
   },
   {
     icon: Wind,
     title: "Pulmonology",
-    description: "Care for asthma, persistent cough and other breathing or lung concerns.",
+    description: "Care for asthma, cough and other breathing problems.",
   },
   {
     icon: Ear,
     title: "ENT",
-    description: "Care for conditions affecting the ear, nose and throat.",
+    description: "Treatment for ear, nose and throat conditions.",
   },
   {
     icon: Activity,
     title: "Endocrinology",
     isNew: true,
-    description: "Specialist consultations for diabetes, thyroid and other hormone-related conditions.",
+    description: "Expert care for diabetes, thyroid and hormonal disorders.",
   },
   {
     icon: ScanLine,
     title: "Radiology",
-    description: "Diagnostic imaging to help your care team assess and plan treatment.",
+    description: "Diagnostic imaging for accurate treatment planning.",
   },
 ];
 
@@ -127,23 +127,90 @@ const sampleTestimonials = [
   {
     name: "K. Meenakshi",
     initials: "KM",
-    topic: "Booking a visit",
     quote:
       "When I called to book a visit, the team explained which appointment to request and what to bring. Knowing the plan made it easier to prepare.",
   },
   {
     name: "S. Arul",
     initials: "SA",
-    topic: "At a consultation",
     quote:
       "I had a few questions about the tests my doctor suggested. We went through them one by one, and I had time to ask about anything I did not understand.",
   },
   {
     name: "R. Kavitha",
     initials: "RK",
-    topic: "Planning a follow-up",
     quote:
       "Before I left, we talked about when to come back and which reports to bring. I knew what to do before the next visit.",
+  },
+  {
+    name: "P. Selvi",
+    initials: "PS",
+    quote: "I brought my older reports with me. The doctor looked through them first, which helped me explain what had already been checked.",
+  },
+  {
+    name: "M. Senthil",
+    initials: "MS",
+    quote: "The appointment desk asked which speciality I needed and helped me choose a time that worked for me.",
+  },
+  {
+    name: "V. Revathi",
+    initials: "VR",
+    quote: "I came with my mother and took notes while we spoke with the doctor. We were glad there was time for both of us to ask questions.",
+  },
+  {
+    name: "T. Karthik",
+    initials: "TK",
+    quote: "I wanted to understand what each test was for. The doctor explained them in everyday language, which made the discussion easier to follow.",
+  },
+  {
+    name: "A. Thendral",
+    initials: "AT",
+    quote: "I called ahead to check the appointment time and took the prescriptions I had at home. That made getting ready for my visit simpler.",
+  },
+  {
+    name: "N. Muthu",
+    initials: "NM",
+    quote: "I was unsure which department to ask for. The team helped me work out where to start when I explained my reason for calling.",
+  },
+  {
+    name: "D. Valli",
+    initials: "DV",
+    quote: "At the end of my visit, I asked for the next steps again. We went over what to bring and what to ask at the follow-up.",
+  },
+  {
+    name: "B. Saravanan",
+    initials: "BS",
+    quote: "I wrote down my questions before the consultation. The doctor went through the list with me so I could keep track of the discussion.",
+  },
+  {
+    name: "R. Thenmozhi",
+    initials: "RT",
+    quote: "I asked about the likely cost of my visit while booking. The conversation helped me prepare and decide what questions to ask next.",
+  },
+  {
+    name: "C. Malarvizhi",
+    initials: "CM",
+    quote: "I had questions about how to get ready for a test. The team explained what to check and whom to call if I was unsure.",
+  },
+  {
+    name: "L. Kumar",
+    initials: "LK",
+    quote: "My family member came with me, and we both had a chance to speak. It was helpful to hear the follow-up instructions together.",
+  },
+  {
+    name: "G. Anitha",
+    initials: "GA",
+    quote: "I asked what I should do if I needed another appointment. The team explained how to contact them and which reports to keep handy.",
+  },
+  {
+    name: "S. Ilango",
+    initials: "SI",
+    quote: "I brought a list of my current medicines. Having it in front of us made it easier to go through my questions in order.",
+  },
+  {
+    name: "J. Nandhini",
+    initials: "JN",
+    quote: "Before leaving, I asked when my follow-up would be. The team explained how to arrange it and what information to have ready when I called.",
   },
 ];
 
@@ -194,11 +261,7 @@ const karurFaq = [
     title: "Does the Karur branch offer 24/7 emergency care?",
     answer: "Yes. Emergency care is available 24 hours a day at the Karur branch.",
   },
-  {
-    title: "What if I need advanced treatment in Erode?",
-    answer:
-      "If your doctor recommends care available at Sudha Hospitals in Erode, the Karur team can help coordinate your referral and explain the next steps.",
-  },
+
 ].map(({ title, answer }) => ({
   title,
   content: <p className="text-base leading-relaxed text-slate-600">{answer}</p>,
@@ -226,14 +289,7 @@ export default function Karur() {
             variants={entrance}
             transition={{ duration: 0.45, ease: "easeOut" }}
           >
-            <div className="flex flex-wrap items-center gap-3">
-              <p className="text-sm font-bold uppercase tracking-widest text-[#2b3990]">
-                Karur Branch
-              </p>
-              <span className="rounded-full bg-[#c13d0a] px-3 py-1 text-xs font-bold uppercase text-white">
-                New Branch
-              </span>
-            </div>
+          
 
             <h1
               id="karur-heading"
@@ -250,13 +306,7 @@ export default function Karur() {
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
-              <Link
-                href="/contact-us"
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border-2 border-[#2b3990] bg-[#2b3990] px-5 text-sm font-bold text-white transition-colors hover:bg-[#202b72] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2b3990]"
-              >
-                <CalendarDays aria-hidden="true" className="h-5 w-5" />
-                Book Appointment
-              </Link>
+             
               <a
                 href="tel:+914242454545"
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border-2 border-[#2b3990] bg-white px-5 text-sm font-bold text-[#2b3990] transition-colors hover:bg-[#e5ecfc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2b3990]"
@@ -271,10 +321,7 @@ export default function Karur() {
                 <MapPin aria-hidden="true" className="mt-0.5 h-5 w-5 shrink-0 text-[#2b3990]" />
                 Karur, Tamil Nadu
               </p>
-              <p className="flex items-start gap-3">
-                <ClipboardList aria-hidden="true" className="mt-0.5 h-5 w-5 shrink-0 text-[#2b3990]" />
-                Bring any previous prescriptions and test reports
-              </p>
+             
             </div>
           </motion.div>
 
@@ -333,7 +380,7 @@ export default function Karur() {
         >
           <Image
             src={overviewConsultation}
-            alt="Illustration of a doctor listening to a patient during a consultation"
+            alt="Illustration of a doctor and nurse reviewing an X-ray together"
             sizes="(min-width: 1280px) 560px, (min-width: 1024px) 45vw, calc(100vw - 2rem)"
             className="order-2 aspect-[4/3] w-full rounded-3xl object-cover lg:order-none"
           />
@@ -350,13 +397,12 @@ export default function Karur() {
             </h2>
             <div className="mt-5 space-y-4 text-base leading-relaxed text-slate-600 md:text-lg">
               <p>
-                Sudha Multispecialty Hospital in Karur has been providing comprehensive healthcare services since 1985, with over 40 years of experience. The hospital offers specialised care across multiple departments, including Cardiology, Neurology, Pulmonology, Orthopedics, ENT, General Medicine, General Surgery, Endocrinology, and Radiology, along with 24/7 Emergency Care.
-Sudha Hospitals brings diverse healthcare services together under one roof. Committed to providing safe, high-quality healthcare through transparent practices and compassionate patient care, Sudha Hospitals strives to build lasting trust with every patient and family.
+                Sudha Multispecialty Hospital in Karur brings over 40 years of healthcare expertise, backed by a legacy of trusted medical services since 1985. We offer comprehensive healthcare services with a commitment to quality patient care.he hospital offers specialised care across multiple departments, including Cardiology, Neurology, Pulmonology, Orthopedics, ENT, General Medicine, General Surgery, Endocrinology, and Radiology, along with 24/7 Emergency Care. Sudha Hospitals brings diverse healthcare services together under one roof. Committed to providing safe, high-quality healthcare through transparent practices and compassionate patient care, Sudha Hospitals strives to build lasting trust with every patient and family.
               </p>
              
             </div>
 
-            <div className="mt-6 rounded-2xl bg-[#eef8ff] p-4 text-sm leading-relaxed text-slate-700 sm:p-5">
+            {/* <div className="mt-6 rounded-2xl bg-[#eef8ff] p-4 text-sm leading-relaxed text-slate-700 sm:p-5">
               <p>
                 <span className="font-bold text-slate-900">Planning a visit?</span>{" "}
                 Ask our team about specialist availability and outpatient hours.
@@ -367,7 +413,7 @@ Sudha Hospitals brings diverse healthcare services together under one roof. Comm
               >
                 Contact our team
               </Link>
-            </div>
+            </div> */}
           </div>
         </motion.div>
       </section>
@@ -450,25 +496,14 @@ Sudha Hospitals brings diverse healthcare services together under one roof. Comm
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="mx-auto max-w-3xl text-center"
           >
-            <p className="text-sm font-bold uppercase tracking-widest text-[#2b3990]">
-              Specialities and Services
-            </p>
+           
             <h2
               id="karur-specialities-heading"
               className="mt-3 text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl"
             >
-              Specialities at Sudha Multispeciality Hospital, Karur
+              Healthcare Services at Sudha Multispecialty Hospital in Karur
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-600 md:text-lg">
-              Explore specialist care for everyday health needs.{" "}
-              <Link
-                href="/contact-us"
-                className="font-semibold text-[#2b3990] underline underline-offset-4 hover:text-[#202b72]"
-              >
-                Contact our team
-              </Link>{" "}
-              to confirm availability in Karur.
-            </p>
+       
           </motion.div>
 
           <ul className="mt-8 grid auto-rows-fr gap-4 sm:mt-10 sm:grid-cols-2 lg:grid-cols-5 lg:gap-5">
@@ -528,72 +563,7 @@ Sudha Hospitals brings diverse healthcare services together under one roof. Comm
 
       <KarurDoctors />
 
-      <section
-        id="testimonials"
-        aria-labelledby="karur-testimonials-heading"
-        className="border-t border-[#e5edf8] bg-white"
-      >
-        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-          <motion.div
-            initial={initial}
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={entrance}
-            transition={{ duration: 0.45, ease: "easeOut" }}
-            className="mx-auto max-w-2xl text-center"
-          >
-            <p className="text-sm font-bold uppercase tracking-widest text-[#2b3990]">
-              Testimonials
-            </p>
-            <h2
-              id="karur-testimonials-heading"
-              className="mt-3 text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl"
-            >
-              Patient Experience Examples
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">
-              The names and quotes below are fictional examples.
-            </p>
-          </motion.div>
-
-          <ul className="mt-8 grid auto-rows-fr gap-4 sm:mt-10 lg:grid-cols-3 lg:gap-5">
-            {sampleTestimonials.map(({ name, initials, topic, quote }, index) => (
-              <motion.li
-                key={name}
-                initial={initial}
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={entrance}
-                transition={{
-                  duration: 0.45,
-                  delay: reduceMotion ? 0 : index * 0.08,
-                  ease: "easeOut",
-                }}
-                className="rounded-2xl border border-[#dce5f0] bg-white p-5 shadow-sm sm:p-7"
-              >
-                <figure className="flex h-full flex-col">
-                  <Quote aria-hidden="true" className="h-7 w-7 text-[#2b3990]" />
-                  <blockquote className="mb-5 mt-4 text-base leading-relaxed text-slate-700">
-                    <p>{quote}</p>
-                  </blockquote>
-                  <figcaption className="mt-auto flex items-center gap-3 border-t border-[#dce5f0] pt-4">
-                    <span
-                      aria-hidden="true"
-                      className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#eef8ff] text-sm font-bold text-[#2b3990]"
-                    >
-                      {initials}
-                    </span>
-                    <div>
-                      <p className="font-bold text-slate-900">{name}</p>
-                      {/* <p className="mt-0.5 text-sm text-slate-600">{topic}</p> */}
-                    </div>
-                  </figcaption>
-                </figure>
-              </motion.li>
-            ))}
-          </ul>
-        </div>
-      </section>
+      <KarurTestimonials items={sampleTestimonials} />
 
       <section
         id="faq"

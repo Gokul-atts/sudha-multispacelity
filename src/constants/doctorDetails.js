@@ -4644,7 +4644,7 @@ export const doctorskarur = [
     id: 1,
     name: "Dr.R.Raj Vikaram",
     speciality: "General Surgery",
-    qualification: "Consultant in General SurgeryMS",
+    qualification: "Consultant in General Surgery",
     degrees: "MS (General Surgery)",
     image: Vikaram,
     doctordetail: [
@@ -4762,7 +4762,7 @@ export const doctorskarur = [
     id: 3,
     name: "Dr.A.Raghupathi",
     speciality: "General Medicine & Cardio",
-    qualification: "PConsultant In General Medicine",
+    qualification: "Consultant In General Medicine",
     degrees: "MD(General Medicine) & DM (Cardio)",
     image: Raghupathi,
     doctordetail: [
