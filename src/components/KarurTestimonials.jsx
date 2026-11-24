@@ -141,14 +141,14 @@ export default function KarurTestimonials({ items }) {
           className="mx-auto max-w-2xl text-center"
         >
           <p className="text-sm font-bold uppercase tracking-widest text-[#c0d4ff]">
-            Testimonials
+            Stories of Trust & Care
           </p>
-          <h2 id="karur-testimonials-heading" className="mt-3 text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">
-            Patient Experience Examples
+          <h2 id="karur-testimonials-heading" className="mt-3 text-3xl font-extrabold leading-tight tracking-tight sm:text-3xl">
+            Every experience reflects our commitment to compassionate and quality healthcare.
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-[#dbe6ff] md:text-lg">
+          {/* <p className="mt-4 text-base leading-relaxed text-[#dbe6ff] md:text-lg">
             The names and quotes below are fictional examples.
-          </p>
+          </p> */}
         </motion.div>
 
         <ul

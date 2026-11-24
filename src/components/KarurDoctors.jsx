@@ -106,7 +106,7 @@ export default function KarurDoctors() {
             </li>
           ))}
 
-          <li className="flex min-h-[24rem] min-w-0 snap-start items-center justify-center rounded-3xl border border-[#dce5f0] bg-[#f9fbff] p-6 text-center shadow-sm">
+          {/* <li className="flex min-h-[24rem] min-w-0 snap-start items-center justify-center rounded-3xl border border-[#dce5f0] bg-[#f9fbff] p-6 text-center shadow-sm">
             <div>
               <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#e7effd] text-[#2b3990]">
                 <CalendarDays aria-hidden="true" className="h-6 w-6" />
@@ -125,7 +125,7 @@ export default function KarurDoctors() {
                 Request an appointment
               </Link>
             </div>
-          </li>
+          </li> */}
         </ul>
 
         {slideCount > visibleCards.count && (
